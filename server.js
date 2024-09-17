@@ -1,20 +1,17 @@
 const express = require('express');
-const path = require('path');
 const { mnemonicNew, mnemonicToWalletKey } = require('ton-crypto');
-const { WalletContractV4, Address } = require('ton');
+const { WalletContractV4 } = require('ton');
 
 const app = express();
-const port = 3000;
 
-// 添加 CORS 支持
+// CORS 配置
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://tonwallet-jade.vercel.app');
+  res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
 });
 
-app.use(express.static('public'));
 app.use(express.json());
 
 app.post('/generate', async (req, res) => {
@@ -87,13 +84,5 @@ app.post('/generate', async (req, res) => {
   }
 });
 
-// 替换 app.listen 部分
-if (process.env.VERCEL) {
-  // Vercel 环境下，导出 app
-  module.exports = app;
-} else {
-  // 本地环境下，启动服务器
-  app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-  });
-}
+// 导出 app 以供 Vercel 使用
+module.exports = app;
