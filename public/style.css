@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #0077be;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #0077be;
+    background-color: #ffffff;
+    color: #333333;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #87cefa;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #0077be;
+}
+
+#result {
+    margin-top: 20px;
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.wallet-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e6f3ff;
+    border-radius: 5px;
+    position: relative;
+}
+
+.wallet-item p {
+    margin: 5px 0;
+    word-break: break-all;
+}
+
+.copy-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 5px;
+    background-color: #0077be;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.copy-btn:hover {
+    background-color: #005f9e;
+}
+
+.notice {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #0077be;
+    color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: #0077be;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

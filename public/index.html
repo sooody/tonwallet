@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TON钱包批量生成工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TON钱包批量生成工具</h1>
+        <div class="input-group">
+            <label for="walletCount">生成钱包数量（每次最多生成100条）:</label>
+            <input type="number" id="walletCount" min="1" max="100" value="1">
+            <button id="generateBtn">生成钱包</button>
+            <button id="exportBtn" style="display:none;">导出表格</button>
+        </div>
+        <div class="notice">
+            <p>该工具为了保证私钥安全可以离线生成，请断网后使用！ 作者：鸟哥 <a href="https://twitter.com/NFTCPS" target="_blank">@NFTCPS</a></p>
+        </div>
+        <div id="result"></div>
+        <div class="footer">
+            <p>TON Bird社区出品</p>
+            <p><a href="https://t.me/ton_bbs" target="_blank">TON Bird社区</a> | <a href="https://t.me/Toncncn" target="_blank">TON Bird频道</a> | <a href="https://x.com/TONchinese" target="_blank">TON Bird社区 X</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
